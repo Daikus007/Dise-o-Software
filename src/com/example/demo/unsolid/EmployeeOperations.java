@@ -10,7 +10,12 @@ public interface EmployeeOperations {
     void saveToFile(String name);
 }
 
-/* ISP (Interface Segregation Principle):
-La interfaz EmployeeOperations tiene métodos que no están relacionados entre sí,
- lo que obliga a las clases que la implementan a depender de métodos que pueden no necesitar.
-*/
+/*
+ISP: La interfaz EmployeeOperations agrupa métodos que representan
+responsabilidades muy diferentes gestión de empleados (agregar, eliminar),
+cálculo de salarios y persistencia de datos. El ISP establece que una interfaz
+debe ser específica y enfocarse en un conjunto cohesivo de operaciones.
+La solución es básicamente eliminar esta interfaz EmployeeOperations ya que es redundante. La clase
+EmployeeManager ya implementa las funcionalidades necesarias a través de la
+inyección de dependencias y la delegación de responsabilidades.
+ */

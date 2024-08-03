@@ -1,13 +1,11 @@
 package com.example.demo.unsolid;
 
-public class EmployeeManager implements EmployeeOperations {
+public class EmployeeManager implements EmployeeRepository {
     private final EmployeeRepository employeeRepository;
     private final SalaryCalculator salaryCalculator;
     private final EmployeeDataPersistence dataPersistence;
-    
-    public EmployeeManager(EmployeeRepository employeeRepository,
-            SalaryCalculator salaryCalculator,
-            EmployeeDataPersistence dataPersistence) {
+
+    public EmployeeManager(EmployeeRepository employeeRepository, SalaryCalculator salaryCalculator, EmployeeDataPersistence dataPersistence) {
         this.employeeRepository = employeeRepository;
         this.salaryCalculator = salaryCalculator;
         this.dataPersistence = dataPersistence;
