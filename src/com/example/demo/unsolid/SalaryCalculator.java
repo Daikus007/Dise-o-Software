@@ -1,11 +1,7 @@
 package com.example.demo.unsolid;
 
-public class SalaryCalculator {
-
-    public double calculateSalary(String name) {
-        EmployeeManager employeeManager = new EmployeeManager();
-        return employeeManager.calculateSalary(name);
-    }
+public interface SalaryCalculator {
+    double calculateSalary(String name);
 }
 
 /* SRP (Single Responsibility Principle):
